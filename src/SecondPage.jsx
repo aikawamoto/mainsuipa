@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Toolbar, Page, Button, BackButton} from 'react-onsenui';
+import {Toolbar, Page, Button, BackButton, Row, Col} from 'react-onsenui';
 
+import './style.css';
 
 export default class SecondPage extends React.Component {
 
@@ -16,6 +17,12 @@ export default class SecondPage extends React.Component {
         <p style={{textAlign: 'center'}}>
           <Button onClick={this.popPage.bind(this)}>Pop page</Button>
         </p>
+        <Row>
+          <Col className="box"></Col>
+          <Col className="box"></Col>
+          <Col className="box"></Col>
+          <Col className="box"></Col>
+        </Row>
 
       </Page>
     );
