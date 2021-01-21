@@ -43,6 +43,7 @@ export default class MainPage extends React.Component {
           <Button onClick={this.pushPage.bind(this)}>START</Button>
         </p>
       </Page>
+      
     );
   }
 }
