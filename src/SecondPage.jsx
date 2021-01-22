@@ -9,28 +9,53 @@ export default class SecondPage extends React.Component {
     super(props);
     this.state = {
       field:  [
-        [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],
-        [-1,0,0,0,0,0,0,0,0,0,-1],
-        [-1,0,0,0,0,0,0,0,0,0,-1],
-        [-1,0,0,0,0,0,0,0,0,0,-1],
-        [-1,0,0,0,0,0,0,0,0,0,-1],
-        [-1,0,0,0,0,0,0,0,0,0,-1],
-        [-1,0,0,0,0,0,0,0,0,0,-1],
-        [-1,0,0,0,0,0,0,0,0,0,-1],
-        [-1,0,0,0,0,0,0,0,0,0,-1],
-        [-1,0,0,0,3,0,0,0,0,0,-1],
-        [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],
-      ],
+        [{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11}],
+        [{type: -1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
+        [{type: -1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
+        [{type: -1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
+        [{type: -1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
+        [{type: -1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
+        [{type: -1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
+        [{type: -1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
+        [{type: -1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
+        [{type: -1, state: 11},{type: 0, state: 10},{type: 1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 12, state: 11},{type: -2, state: 11},{type: 0, state: 12},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
+        [{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11}]
+        ],
+
       mode: false,
     }
     var data = this.state.data;
-    
+    this.mark=this.mark.bind(this);
+    this.masu=this.masu.bind(this);
 }
 
  popPage() {
    this.props.hako(9);
    this.props.navigator.popPage(); // タイトル画面に戻る
  }
+
+  mark(cell) {
+   if(cell.state == 12 )
+     return "🚩";
+
+   if(0<cell.type&&cell.type<9)
+     return cell.type;
+  
+  if(cell.type == -2 )
+     return "💣";
+
+  return " ";
+}
+
+  masu(cell) {
+  if(cell.state == 10 )
+     return "box2";
+
+     return "box";
+
+}
+
+
 
   render() {
     const item = [];
@@ -39,10 +64,12 @@ export default class SecondPage extends React.Component {
     for(i=1;i<10;i++){
       item.splice(0,item.length);
       for(j=1;j<10;j++){
-        item.push(<Col className="box">{(this.state.field[i][j])}</Col>);
+        item.push(<Col className={this.masu(this.state.field[i][j])}>{this.mark(this.state.field[i][j])}</Col>);
       }
         f.push(<Row>{item.concat()}</Row>);
     }
+
+  
   
 
     return (
@@ -77,6 +104,7 @@ export default class SecondPage extends React.Component {
     );
   }
 }
+
 
 
 
