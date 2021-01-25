@@ -7,8 +7,33 @@ import './style.css';
 export default class SecondPage extends React.Component {
   constructor(props) {
     super(props);
+    this.fieldcr=this.fieldcr.bind(this);
+     var f = this.fieldcr();
+
     this.state = {
-      field:  [
+      field: f,
+
+       
+      mode: false,
+    };
+    
+    this.mark=this.mark.bind(this);
+    this.masu=this.masu.bind(this);
+    this.bakudanoku=this.bakudanoku.bind(this);
+    this.suuzimasu=this.suuzimasu.bind(this);
+    
+    
+}
+
+
+ popPage() {
+   this.props.hako(9);
+   this.props.navigator.popPage(); // タイトル画面に戻る
+ }
+
+ fieldcr() {
+// 右図のようにフィールドの各セルを空白マス・開いていない状態にする。周囲は壁マスにする
+var field =  [
         [{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11}],
         [{type: -1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
         [{type: -1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
@@ -18,21 +43,15 @@ export default class SecondPage extends React.Component {
         [{type: -1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
         [{type: -1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
         [{type: -1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
-        [{type: -1, state: 11},{type: 0, state: 10},{type: 1, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 12, state: 11},{type: -2, state: 11},{type: 0, state: 12},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
-        [{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11}]
-        ],
+        [{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: 0, state: 11},{type: -1, state: 11}],
+        [{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11},{type: -1, state: 11}],
+        ];
 
-      mode: false,
-    }
-    var data = this.state.data;
-    this.mark=this.mark.bind(this);
-    this.masu=this.masu.bind(this);
+        this.bakudanoku(field);
+        this.suuzimasu(field);
+        
+        return field; // 作成したフィールド情報を返す
 }
-
- popPage() {
-   this.props.hako(9);
-   this.props.navigator.popPage(); // タイトル画面に戻る
- }
 
   mark(cell) {
    if(cell.state == 12 )
@@ -55,18 +74,77 @@ export default class SecondPage extends React.Component {
 
 }
 
+  
+  bakudanoku(field) {
+  var bazu = 0;
+  var i,j;
+  
+  while (bazu !=10){
+    do{
+      i = Math.floor(Math.random() * 9) + 1;
+      j = Math.floor(Math.random() * 9) + 1;
+    }while (field[i][j].type ==-2);
+   console.log("💣置いたよ=" + i + ", "+j);
+
+   field[i][j].type=-2;
+   bazu+=1; 
+   }
+}
+   
+
+suuzimasu(field) {
+ 
+ var a=0;
+  for(var i=1;i<10;i++) {
+    for(var j=1;j<10;j++) {
+      a=0;
+      if(field[i][j].type==0){
+        if(field[i-1][j-1].type==-2){
+          a+=1;
+          }
+          if(field[i-1][j].type==-2){ 
+            a+=1;
+            }
+          if(field[i-1][j+1].type==-2){
+            a+=1;
+            }
+          if(field[i][j-1].type==-2){
+            a+=1;
+           }
+          if(field[i][j+1].type==-2){
+            a+=1;
+          }
+          if(field[i+1][j-1].type==-2){
+            a+=1;
+         }
+          if(field[i+1][j].type==-2){
+            a+=1;
+         }
+          if(field[i+1][j+1].type==-2){
+            a+=1;
+         }
+         console.log("数字置いたよ=" + i + ", "+j);
+     field[i][j].type=a;
+
+
+    }
+       
+}
+}
+}
+
 
 
   render() {
     const item = [];
-    const f = [];
+    const c = [];
     var i,j;
     for(i=1;i<10;i++){
       item.splice(0,item.length);
       for(j=1;j<10;j++){
         item.push(<Col className={this.masu(this.state.field[i][j])}>{this.mark(this.state.field[i][j])}</Col>);
       }
-        f.push(<Row>{item.concat()}</Row>);
+        c.push(<Row>{item.concat()}</Row>);
     }
 
   
@@ -94,7 +172,7 @@ export default class SecondPage extends React.Component {
       </p>
      
       <div>
-       {f}
+       {c}
       </div>
 
          
