@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Toolbar, Page, Button} from 'react-onsenui';
 
 import SecondPage from './SecondPage'
+import './style.css';
 
 export default class MainPage extends React.Component {
   constructor(props){
@@ -30,7 +31,9 @@ export default class MainPage extends React.Component {
   renderToolbar() {
     return (
       <Toolbar>
-        <div className="center">Navigator</div>
+        
+        <div className="sample-1">マインスイーパー</div>
+       
       </Toolbar>
     );
   }
@@ -39,8 +42,8 @@ export default class MainPage extends React.Component {
     return (
       <Page renderToolbar={this.renderToolbar}>
         <p style={{textAlign: 'center'}}>
-          <div>High Score ：{this.state.highscore}</div>
-          <Button onClick={this.pushPage.bind(this)}>START</Button>
+          <p><span class="decorated sample-1" data-text="High Score">High Score ：{this.state.highscore}</span></p>
+          <Button onClick={this.pushPage.bind(this)}><div className="sample-1 ">START</div></Button>
         </p>
       </Page>
       
