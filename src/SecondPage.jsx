@@ -35,7 +35,6 @@ export default class SecondPage extends React.Component {
     
 }
 
-
  popPage() {
    if(this.state.time!=-1){
      this.props.hako(this.state.time);
@@ -71,6 +70,10 @@ var field =  [
 
    if(0<cell.type&&cell.type<9)
      return cell.type;
+   
+   if(this.state.time<0 )
+     return "🔥";
+   
   
   if(cell.type == -2 )
      return "💣";
@@ -138,7 +141,6 @@ suuzimasu(field) {
          
      field[i][j].type=a;
 
-
     }
        
 }
@@ -186,7 +188,6 @@ click(i,j) {
 }
 
 rinsetumasuakeru(field, i, j) {
-
 
   if(field[i][j].state==10){
     return;
@@ -245,7 +246,6 @@ gameclear() {
   this.setState(s);
 }
 
-
 // ゲーム画面が破棄されるときに呼び出される
 componentWillUnmount() {
 clearInterval(this.intervalID); // タイマーを止める
@@ -281,7 +281,6 @@ this.setState(s);
     }
 
 
-
   
 
     return (
@@ -311,7 +310,6 @@ this.setState(s);
         {message}
         {score}
 
-
          <p style={{textAlign: 'center'}}>
           <Button onClick={this.popPage.bind(this)}><div className="sample-1 ">戻る</div></Button>
         </p>
@@ -323,9 +321,6 @@ this.setState(s);
     );
   }
 }
-
-
-
 
 
 
